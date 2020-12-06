@@ -1,18 +1,23 @@
-<nav class="navbar">
+<nav class="navbar is-primary">
   <div class="navbar-brand">
     <a class="navbar-item">
       <img src="assets/images/logo-test.png">
     </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
   <div class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <a class="navbar-item" routerLink="/home" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
         Home
       </a>
-      <a class="navbar-item">
+      <a class="navbar-item" routerLink="/workflow" routerLinkActive="is-active">
         Workflow
       </a>
-      <a class="navbar-item">
+      <a class="navbar-item" routerLink="/current" routerLinkActive="is-active">
         Current
       </a>
       <div class="navbar-item has-dropdown is-hoverable">
@@ -21,7 +26,7 @@
         </a>
         <div class="navbar-dropdown">
           <a class="navbar-item">
-            My subscriptions
+            Notifications
           </a>
           <a class="navbar-item">
             Settings
@@ -33,6 +38,11 @@
         </div>
       </div>
 
+    </div>
+    <div class="navbar-end">
+      <a class="navbar-item">
+        Login
+      </a>
     </div>
   </div>
 </nav>
